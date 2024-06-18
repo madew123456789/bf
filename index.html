@@ -16,6 +16,63 @@
 </head>
 
 <body>
+
+        <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            height: 100vh;
+            background: none;
+            color: #000;
+            overflow: hidden;
+        }
+
+        #fullscreenBtn {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            /* Changing background image */
+            background-image: url('https://i.imgur.com/LGtR3ku.gif');
+            background-size: cover;
+        }
+
+        #fullscreenBtn:hover {
+            background-color: rgba(52, 152, 219, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <button id="fullscreenBtn">Go Fullscreen</button>
+    <script>
+        document.getElementById('fullscreenBtn').addEventListener('click', function() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        });
+
+        document.addEventListener('fullscreenchange', () => {
+            const fullscreenBtn = document.getElementById('fullscreenBtn');
+            if (document.fullscreenElement) {
+                fullscreenBtn.textContent = "Exit Fullscreen";
+            } else {
+                fullscreenBtn.textContent = "Go Fullscreen";
+            }
+        });
+    </script>
+    
   <img class="background" src="https://cdn.glitch.global/a4c06b8d-51cf-4c92-89d1-6da9a6478043/download%20(1).png?v=1718597130956"/>
 
   <div class="container" style="align-items: center; height: 100%; margin-top: 50px;" >
@@ -1168,61 +1225,7 @@
   </script>
   
  <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/3e0381c4-a312-453a-a06d-22aaaffe8cb5/stock-vector-glowing-neon-line-dharma-wheel-icon-isolated-black-background-buddhism-modified.ico?v=1716615964861">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            height: 100vh;
-            background: none;
-            color: #000;
-            overflow: hidden;
-        }
 
-        #fullscreenBtn {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: transparent;
-            border: none;
-            border-radius: 5px;
-            color: #fff;
-            transition: background-color 0.3s ease;
-            /* Changing background image */
-            background-image: url('https://i.imgur.com/LGtR3ku.gif');
-            background-size: cover;
-        }
-
-        #fullscreenBtn:hover {
-            background-color: rgba(52, 152, 219, 0.5);
-        }
-    </style>
-</head>
-<body>
-    <button id="fullscreenBtn">Go Fullscreen</button>
-    <script>
-        document.getElementById('fullscreenBtn').addEventListener('click', function() {
-            if (!document.fullscreenElement) {
-                document.documentElement.requestFullscreen().catch(err => {
-                    alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-                });
-            } else {
-                document.exitFullscreen();
-            }
-        });
-
-        document.addEventListener('fullscreenchange', () => {
-            const fullscreenBtn = document.getElementById('fullscreenBtn');
-            if (document.fullscreenElement) {
-                fullscreenBtn.textContent = "Exit Fullscreen";
-            } else {
-                fullscreenBtn.textContent = "Go Fullscreen";
-            }
-        });
-    </script>
 </body>
 
 </html>

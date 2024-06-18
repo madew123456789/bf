@@ -1155,43 +1155,6 @@
             }
         }
 
-var lampStates = new Array(18).fill(0); // Array to store lamp states, initialized to 0
-
-function changeImage(index) {
-    var image = document.getElementById("lamp" + (index + 1));
-    if (image.src.includes("lamp.gif")) {
-        image.src = "lamp.png";
-        lampStates[index] = 0;
-    } else {
-        image.src = "lamp.gif";
-        lampStates[index] = 1;
-    }
-
-    // Check if all lamps are on
-    if (lampStates.every(state => state === 1)) {
-        setTimeout(simulateCtrlM, 3000);
-    }
-}
-
-function simulateCtrlM() {
-    var event = new KeyboardEvent('keydown', {
-        key: 'm',
-        code: 'KeyM',
-        keyCode: 77,
-        charCode: 77,
-        ctrlKey: true,
-        bubbles: true
-    });
-    document.dispatchEvent(event);
-
-    redirectPage();
-}
-
-function redirectPage() {
-    window.location.href = "secondPage.html"; // Replace with your actual redirect URL
-}
-
-
     </script>
 
    

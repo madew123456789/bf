@@ -238,156 +238,126 @@
             }
         });
     </script>
-          
-            <div class="col-3" style="text-align: center;">
-                <div>
-                    <img id="lamp10" src="lamp.png" onclick="changeImage10()" height="120px" width="auto" />
-                </div>
-            </div>
+          <script>
+    <div class="col-3" style="text-align: center;">
+        <div>
+            <img id="lamp10" src="lamp.png" height="120px" width="auto" />
+        </div>
+    </div>
 
-                      <script>
+    <div class="col-3" style="text-align: center;">
+        <div>
+            <img id="lamp11" src="lamp.png" height="120px" width="auto" />
+        </div>
+    </div>
+
+    <div class="col-4" style="text-align: center;">
+        <div>
+            <img id="lamp12" src="lamp.png" height="120px" width="auto" />
+        </div>
+    </div>
+
+    <div class="col-4" style="text-align: center;">
+        <div>
+            <img id="lamp13" src="lamp.png" height="120px" width="auto" />
+        </div>
+    </div>
+
+    <div class="col-4" style="text-align: center;">
+        <div>
+            <img id="lamp14" src="lamp.png" height="120px" width="auto" />
+        </div>
+    </div>
+
+    <div class="col-3" style="text-align: center;">
+        <div>
+            <img id="lamp15" src="lamp.png" height="120px" width="auto" />
+        </div>
+    </div>
+
+    <div class="col-3" style="text-align: center;">
+        <div>
+            <img id="lamp16" src="lamp.png" height="120px" width="auto" />
+        </div>
+    </div>
+
+    <div class="col-3" style="text-align: center;">
+        <div>
+            <img id="lamp17" src="lamp.png" height="120px" width="auto" />
+        </div>
+    </div>
+
+    <div class="col-3" style="text-align: center;">
+        <div>
+            <img id="lamp18" src="lamp.png" height="120px" width="auto" />
+        </div>
+    </div>
+
+    <script>
+        const keysPressed = {};
+
         document.addEventListener('keydown', function(event) {
-            if (event.key === '1,0') {
+            keysPressed[event.key] = true;
+
+            if (keysPressed['1'] && keysPressed['0']) {
                 document.getElementById('lamp10').src = 'lamp.gif';
             } else if (event.key === 'J') {
                 document.getElementById('lamp10').src = 'lamp.png';
             }
-        });
-    </script>
-          
-            <div class="col-3" style="text-align: center;">
-                <div>
-                    <img id="lamp11" src="lamp.png" onclick="changeImage11()" height="120px" width="auto" />
-                </div>
-            </div>
-        </div>
 
-                <script>
-        document.addEventListener('keydown', function(event) {
-            if (event.key === '1,1') {
+            if (keysPressed['1'] && keysPressed['1']) {
                 document.getElementById('lamp11').src = 'lamp.gif';
             } else if (event.key === 'K') {
                 document.getElementById('lamp11').src = 'lamp.png';
             }
-        });
-    </script>
-    
-        <div class="row lamps">
-            <div class="col-4" style="text-align: center;">
-                <div>
-                    <img id="lamp12" src="lamp.png" onclick="changeImage12()" height="120px" width="auto" />
-                </div>
-            </div>
 
-                      <script>
-        document.addEventListener('keydown', function(event) {
-            if (event.key === '12') {
+            if (keysPressed['1'] && keysPressed['2']) {
                 document.getElementById('lamp12').src = 'lamp.gif';
             } else if (event.key === 'L') {
                 document.getElementById('lamp12').src = 'lamp.png';
             }
-        });
-    </script>
-          
-            <div class="col-4" style="text-align: center;">
-                <div>
-                    <img id="lamp13" src="lamp.png" onclick="changeImage13()" height="120px" width="auto" />
-                </div>
-            </div>
 
-                      <script>
-        document.addEventListener('keydown', function(event) {
-            if (event.key === '13') {
+            if (keysPressed['1'] && keysPressed['3']) {
                 document.getElementById('lamp13').src = 'lamp.gif';
             } else if (event.key === 'M') {
                 document.getElementById('lamp13').src = 'lamp.png';
             }
-        });
-    </script>
-          
-            <div class="col-4" style="text-align: center;">
-                <div>
-                    <img id="lamp14" src="lamp.png" onclick="changeImage14()" height="120px" width="auto" />
-                </div>
-            </div>
-        </div>
 
-            <script>
-        document.addEventListener('keydown', function(event) {
-            if (event.key === '14') {
+            if (keysPressed['1'] && keysPressed['4']) {
                 document.getElementById('lamp14').src = 'lamp.gif';
             } else if (event.key === 'N') {
                 document.getElementById('lamp14').src = 'lamp.png';
             }
-        });
-    </script>
 
-        <div class="row lamps">
-            <div class="col-3" style="text-align: center;">
-                <div>
-                    <img id="lamp15" src="lamp.png" onclick="changeImage15()" height="120px" width="auto" />
-                </div>
-            </div>
-          
-                      <script>
-        document.addEventListener('keydown', function(event) {
-            if (event.key === '15') {
+            if (keysPressed['1'] && keysPressed['5']) {
                 document.getElementById('lamp15').src = 'lamp.gif';
             } else if (event.key === 'O') {
                 document.getElementById('lamp15').src = 'lamp.png';
             }
-        });
-    </script> 
-          
-            <div class="col-3" style="text-align: center;">
-                <div>
-                    <img id="lamp16" src="lamp.png" onclick="changeImage16()" height="120px" width="auto" />
-                </div>
-            </div>
 
-                      <script>
-        document.addEventListener('keydown', function(event) {
-            if (event.key === '16') {
+            if (keysPressed['1'] && keysPressed['6']) {
                 document.getElementById('lamp16').src = 'lamp.gif';
             } else if (event.key === 'P') {
                 document.getElementById('lamp16').src = 'lamp.png';
             }
-        });
-    </script>
-          
-            <div class="col-3" style="text-align: center;">
-                <div>
-                    <img id="lamp17" src="lamp.png" onclick="changeImage17()" height="120px" width="auto" />
-                </div>
-            </div>
 
-                      <script>
-        document.addEventListener('keydown', function(event) {
-            if (event.key === '17') {
+            if (keysPressed['1'] && keysPressed['7']) {
                 document.getElementById('lamp17').src = 'lamp.gif';
             } else if (event.key === 'Q') {
                 document.getElementById('lamp17').src = 'lamp.png';
             }
-        });
-    </script>
-          
-            <div class="col-3" style="text-align: center;">
-                <div>
-                    <img id="lamp18" src="lamp.png" onclick="changeImage18()" height="120px" width="auto" />
-                </div>
-            </div>
-        </div>
 
-                   <script>
-        document.addEventListener('keydown', function(event) {
-            if (event.key === '18') {
+            if (keysPressed['1'] && keysPressed['8']) {
                 document.getElementById('lamp18').src = 'lamp.gif';
             } else if (event.key === 'R') {
                 document.getElementById('lamp18').src = 'lamp.png';
             }
         });
+
+        document.addEventListener('keyup', function(event) {
+            delete keysPressed[event.key];
+        });
     </script>
-       
 
   <div class="circle-container">
     <div class="circle"></div>

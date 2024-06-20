@@ -181,27 +181,7 @@
     </style>
 </head>
 <body>
-    <button id="fullscreenBtn">Go Fullscreen</button>
-    <script>
-        document.getElementById('fullscreenBtn').addEventListener('click', function() {
-            if (!document.fullscreenElement) {
-                document.documentElement.requestFullscreen().catch(err => {
-                    alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-                });
-            } else {
-                document.exitFullscreen();
-            }
-        });
-
-        document.addEventListener('fullscreenchange', () => {
-            const fullscreenBtn = document.getElementById('fullscreenBtn');
-            if (document.fullscreenElement) {
-                fullscreenBtn.textContent = "Exit Fullscreen";
-            } else {
-                fullscreenBtn.textContent = "Go Fullscreen";
-            }
-        });
-    </script>
+   
 <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur117.cur), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2008/12/17/cool-red-outer-glow-pointer.html" target="_blank" title="Cool Red Outer Glow Pointer"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Cool Red Outer Glow Pointer" style="position:absolute; top: 0px; right: 0px;" /></a>
  <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/3e0381c4-a312-453a-a06d-22aaaffe8cb5/stock-vector-glowing-neon-line-dharma-wheel-icon-isolated-black-background-buddhism-modified.ico?v=1716615964861">
 <html translate="no">

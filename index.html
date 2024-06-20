@@ -16,33 +16,8 @@
 </head>
 
 <body>
-     <script>
-    // Initialize a flag to track if the audio is currently playing
-    let isAudioPlaying = false;
-
-    document.addEventListener('click', () => {
-        // Check if audio is already playing; if so, return early
-        if (isAudioPlaying) {
-            return;
-        }
-
-        const audio = new Audio('https://www.desawanamusic.com/uploads/audios/Mangala-Denex-Budu%20Bana%20Padayak-Desawana-Music.mp3');
-        
-        // Set loop property to false to prevent audio from looping
-        audio.loop = false;
-
-        // Set flag to true to indicate audio is now playing
-        isAudioPlaying = true;
-
-        // Play the audio
-        audio.play();
-
-        // When audio finishes playing, reset the flag to false
-        audio.onended = () => {
-            isAudioPlaying = false;
-        };
-    });
-</script>
+     <audio id="backgroundAudio" src="https://www.desawanamusic.com/uploads/audios/Mangala-Denex-Budu%20Bana%20Padayak-Desawana-Music.mp3" autoplay loop></audio>
+     
 
   <img class="background" src="https://cdn.glitch.global/a4c06b8d-51cf-4c92-89d1-6da9a6478043/download%20(1).png?v=1718597130956"/>
 
